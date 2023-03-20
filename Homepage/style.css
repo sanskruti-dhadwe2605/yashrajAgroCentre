@@ -1,0 +1,518 @@
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,400&display=swap');
+             :root {
+                --green: #d7fba1;
+            }
+            
+            * {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-transform: capitalize;
+                outline: none;
+                border: none;
+                text-decoration: none;
+                transition: all .2s linear;
+            }
+            
+            span {
+                color: #9bb574;
+            }
+            
+            *::selection {
+                background: var(--green);
+                color: #fff;
+            }
+            
+            html {
+                font-size: 62.5%;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                scroll-padding-top: 6rem;
+            }
+            
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: #3376226c;
+                z-index: 1000;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem 9%;
+            }
+            
+            header .logo {
+                margin-left: 3px;
+                font-size: 2.5rem;
+                font-weight: bolder;
+                color: #050505;
+                text-transform: uppercase;
+            }
+            
+            header .logo span {
+                color: var(--green);
+                text-transform: uppercase;
+            }
+            
+            header .navbar a {
+                color: black;
+                font-size: 2rem;
+                margin: 0.8rem;
+            }
+            
+            header .navbar a:hover {
+                color: var(--green);
+            }
+            
+            header .icons i {
+                font-size: 2.5rem;
+                color: black;
+                cursor: pointer;
+                margin-right: 1rem;
+            }
+            
+            header .icons i:hover {
+                color: var(--green);
+            }
+            
+            header .search-bar-container {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 1.5rem 2rem;
+                background: #467303;
+                border-top: .1rem solid reba(255, 255, 255, 2);
+                display: flex;
+                align-items: center;
+                z-index: 1001;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+            
+            header .search-bar-container .active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            header .search-bar-container #search-bar {
+                width: 100%;
+                padding: 1rem;
+                text-transform: none;
+                color: #333;
+                font-size: 1.7rem;
+                border-radius: .5rem;
+            }
+            
+            header .search-bar-container label {
+                color: #fff;
+                cursor: pointer;
+                font-size: 3rem;
+                margin-left: 1.5rem;
+            }
+            
+            header .search-bar-container label:hover {
+                color: var(--green);
+            }
+            
+            html {
+                font-size: 62.5%;
+                overflow-x: hidden;
+                scroll-padding-top: 6rem;
+                scroll-behavior: smooth;
+            }
+            
+            section {
+                padding: 1.5rem 9%;
+            }
+            
+            .home {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column;
+                position: relative;
+                z-index: 0;
+            }
+            
+            .home .content {
+                text-align: center;
+                align-content: center;
+                align-items: center;
+            }
+            
+            .home .content h3 {
+                font-size: 1.7rem;
+                color: black;
+                text-transform: uppercase;
+                text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+            }
+            
+            .home .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            
+            .home .contols {
+                padding: 1rem;
+                border-radius: 5rem;
+                background: rgba(0, 0, 0, .3);
+                position: relative;
+                top: 10rem;
+            }
+            
+            .home .contols .vdo-btn {
+                height: 2rem;
+                width: 2rem;
+                display: inline-block;
+                border-radius: 50%;
+                background: #ffff;
+                cursor: pointer;
+                margin: 0 .5rem;
+            }
+            
+            .home .contols .vdo-btn.active {
+                background: var(--green);
+            }
+            
+            .about .row {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+                padding: 2rem 0;
+                padding-bottom: 3rem;
+                width: 100%;
+                background-color: #65cb5ca2;
+                object-fit: cover;
+            }
+            
+            .about .row .video-container {
+                flex: 1 1 40rem;
+                position: relative;
+                margin: 30px;
+            }
+            
+            .about .row .video-container iframe {
+                width: 600px;
+                border: 1.5rem solid #fff;
+                border-radius: .5rem;
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+                height: 500px;
+                object-fit: cover;
+            }
+            
+            .about .row .video-container h3 {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 3rem;
+                background: #fff;
+                width: 100%;
+                padding: 1rem 2rem;
+                text-align: center;
+                mix-blend-mode: screen;
+            }
+            
+            .about .row .content {
+                flex: 1 1 40rem;
+            }
+            
+            .about .row .content h3 {
+                font-size: 3rem;
+                color: #333;
+            }
+            
+            .about .row .content p {
+                font-size: 2.1rem;
+                color: black;
+                padding: .5rem 0;
+                padding-top: 1rem;
+                line-height: 1.5;
+            }
+            
+            .icons-container {
+                background: #65cb5ca2;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+            
+            .icons-container .icons {
+                background: #fff;
+                border: .1rem solid rgba(0, 0, 0, .1);
+                padding: 2rem;
+                display: flex;
+                align-items: center;
+                flex: 1 1 25rem;
+            }
+            
+            .icons-container .icons img {
+                height: 5rem;
+                margin-right: 2rem;
+            }
+            
+            .icons-container .icons h3 {
+                color: #333;
+                padding-bottom: .5rem;
+                font-size: 1.5rem;
+            }
+            
+            .icons-container .icons span {
+                color: #555;
+                font-size: 1.3rem;
+            }
+            
+            .heading {
+                text-align: center;
+                font-size: 4rem;
+                color: #333;
+                padding: 1rem;
+                margin: 2rem 0;
+                width: 100%;
+                background: #65cb5ca2;
+            }
+            
+            .products {
+                margin: 10px;
+                background-color: #65cb5c7d;
+            }
+            
+            .products .box-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+                border: #050505;
+                gap: 1.5rem;
+            }
+            
+            .products .box-container .box {
+                text-align: center;
+                border: var(--border);
+                padding: 2rem;
+                border: #050505;
+                box-shadow: 3px 5px 1px #0e0f0e;
+            }
+            
+            .products .box-container .box:hover {
+                background-color: #03550e;
+            }
+            
+            .products .box-container .box .icons a {
+                height: 5rem;
+                width: 5rem;
+                line-height: 5rem;
+                font-size: 2rem;
+                border: var(--border);
+                color: #fff;
+                margin: .3rem;
+            }
+            
+            .products .box-container .box .icons a:hover {
+                background: #81cb5ca2;
+            }
+            
+            .products .box-container .box .image {
+                padding: 2.5rem 0;
+            }
+            
+            .products .box-container .box .image img {
+                height: 25rem;
+            }
+            
+            .products .box-container .box .content h3 {
+                color: #fff;
+                font-size: 2.5rem;
+            }
+            
+            .products .box-container .box .content .stars {
+                padding: 1.5rem;
+            }
+            
+            .products .box-container .box .content .stars i {
+                font-size: 1.7rem;
+                color: var(--main-color);
+            }
+            
+            .products .box-container .box .content .price {
+                color: #fff;
+                font-size: 2.5rem;
+            }
+            
+            .products .box-container .box .content .price span {
+                text-decoration: line-through;
+                font-weight: lighter;
+                font-size: 1.5rem;
+            }
+            
+            .products .button:hover {
+                background-color: #d7fba1;
+            }
+            
+            .contact-container {
+                margin: 10px;
+                background-color: #65cb5ca2;
+                display: flex;
+            }
+            
+            .contact-container .map {
+                margin: 20px;
+                box-shadow: #467303 3px;
+            }
+            
+            @media (max-width:991px) {
+                html {
+                    font-size: 50%;
+                }
+                header {
+                    padding: 2rem;
+                }
+                section {
+                    padding: 2rem;
+                }
+                .home {
+                    background-position: left;
+                }
+            }
+            
+            @media (max-width:768px) {
+                header .fa-bars {
+                    display: block;
+                }
+                header .navbar {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background: #eee;
+                    border-top: .1rem solid rgba(0, 0, 0, .1);
+                    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                }
+                header #toggler:checked~.navbar {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                }
+                header .navbar a {
+                    margin: 1.5rem;
+                    padding: 1.5rem;
+                    background: #fff;
+                    border: .1rem solid rgba(0, 0, 0, .1);
+                    display: block;
+                }
+                .home .content h3 {
+                    font-size: 5rem;
+                }
+                .home .content span {
+                    font-size: 2.5rem;
+                }
+                .icons-container .icons h3 {
+                    font-size: 2rem;
+                }
+                .icons-container .icons span {
+                    font-size: 1.7rem;
+                }
+            }
+            
+            @media (max-width:450px) {
+                html {
+                    font-size: 50%;
+                }
+                .heading {
+                    font-size: 3rem;
+                }
+            }
+            
+            <div class="row_container wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="wpb_text_column wpb_content_element  vc_custom_1555165384025 box-title-bold"><div class="wpb_wrapper"><h3 style="text-align: left;">Our <span style="color: #ed141d;">Recruiters</span></h3></div></div><div class="wpb_text_column wpb_content_element "><div class="wpb_wrapper"><div class="wondercarousellightbox_options" data-skinsfoldername="" data-jsfolder="https://aissmsioit.org/wp-content/plugins/wonderplugin-carousel/engine/" style="display:none;"></div><style type="text/css">@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+            #wonderplugincarousel-8 .amazingcarousel-image {
+                position: relative;
+                padding: 0px;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-image img {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                border: 0;
+                margin: 0;
+                padding: 0;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-title {
+                position: relative;
+                font: 14px "Open Sans", sans-serif;
+                color: #333333;
+                margin: 6px;
+                text-align: center;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-list-container {
+                padding: 16px 0;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-item-container {
+                text-align: center;
+                padding: 4px;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-prev {
+                left: 0%;
+                top: 45%;
+                margin-left: -48px;
+                margin-top: -16px;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-next {
+                right: 0%;
+                top: 45%;
+                margin-right: -48px;
+                margin-top: -16px;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-nav {
+                position: absolute;
+                width: 100%;
+                top: 100%;
+            }
+            
+            #wonderplugincarousel-8 .amazingcarousel-bullet-wrapper {
+                margin: 4px auto;
+            }
+            
+            .amazingcarousel-socialmedia-button {
+                display: inline-block;
+                margin: 4px;
+            }
+            
+            .amazingcarousel-socialmedia-button a {
+                box-shadow: none;
+            }
+            
+            .amazingcarousel-socialmedia-icon {
+                display: table-cell;
+                width: 32px;
+                height: 32px;
+                font-size: 18px;
+                border-radius: 50%;
+                color: #fff;
+                vertical-align: middle;
+                text-align: center;
+                cursor: pointer;
+                padding: 0;
+            }
+            
+            .amazingcarousel-socialmedia-rotate {
+                transition: transform .4s ease-in;
+            }
+            
+            .amazingcarousel-socialmedia-rotate:hover {
+                transform: rotate(360deg);
+            }
+            
+            </style><div class="wonderplugincarousel-container" id="wonderplugincarousel-container-8"><div class="wonderplugincarousel" id="wonderplugincarousel-8" data-carouselid="8" data-width="250" data-height="120" data-skin="scroller" data-showimgtitle="false" data-sameheight="false" data-sameheightresponsive="false" data-fullwidth="true" data-centerimage="true" data-fitimage="false" data-fitcenterimage="false" data-fixaspectratio="true" data-autoplay="true" data-random="false" data-circular="true" data-pauseonmouseover="true" data-continuous="true" data-responsive="true" data-showhoveroverlay="false" data-showhoveroverlayalways="false" data-hidehoveroverlayontouch="false" data-lightboxresponsive="true" data-lightboxshownavigation="false" data-lightboxnogroup="false" data-lightboxshowtitle="true" data-lightboxshowdescription="false" data-lightboxaddsocialmedia="false" data-usescreenquery="false" data-donotinit="false" data-addinitscript="false" data-doshortcodeontext="false" data-lightboxshowsocial="false" data-lightboxshowfacebook="true" data-lightboxshowtwitter="true" data-lightboxshowpinterest="true" data-lightboxsocialrotateeffect="true" data-donotcircularforless="false" data-deferloading="false" data-hidecontainerbeforeloaded="false" data-hidecontaineroninit="true" data-lightboximagekeepratio="true" data-showplayvideo="true" data-triggerresize="false" data-lightboxfullscreenmode="false" data-lightboxcloseonoverlay="true" data-lightboxvideohidecontrols="false" data-lightboxautoslide="false" data-lightboxshowtimer="true" data-lightboxshowplaybutton="true" data-lightboxalwaysshownavarrows="false" data-lightboxshowtitleprefix="true" data-spacing="4" data-rownumber="1" data-visibleitems="6" data-arrowstyle="none" data-arrowimage="arrows-32-32-1.png" data-arrowwidth="32" data-arrowheight="32" data-navstyle="none" data-navimage="bullet-16-16-0.png" data-navwidth="16" data-navheight="16" data-navspacing="8" data-hoveroverlayimage="hoveroverlay-64-64-6.png" data-lightboxthumbwidth="90" data-lightboxthumbheight="60" data-lightboxthumbtopmargin="12" data-lightboxthumbbottommargin="4" data-lightboxbarheight="64" data-lightboxtitlebottomcss="{color:#333; font-size:14px; font-family:Armata,sans-serif,Arial; overflow:hidden; text-align:left;}" data-lightboxdescriptionbottomcss="{color:#333; font-size:12px; font-family:Arial,Helvetica,sans-serif; overflow:hidden; text-align:left; margin:4px 0px 0px; padding: 0px;}" data-continuousduration="2500" data-autoplaydir="left" data-scrollmode="page" data-interval="3000" data-transitionduration="1000" data-lightboxtitlestyle="bottom" data-lightboximagepercentage="75" data-lightboxdefaultvideovolume="1" data-lightboxoverlaybgcolor="#000" data-lightboxoverlayopacity="0.9" data-lightboxbgcolor="#fff" data-lightboxtitleprefix="%NUM / %TOTAL" data-lightboxtitleinsidecss="color:#fff; font-size:16px; font-family:Arial,Helvetica,sans-serif; overflow:hidden; text-align:left;" data-lightboxdescriptioninsidecss="color:#fff; font-size:12px; font-family:Arial,Helvetica,sans-serif; overflow:hidden; text-align:left; margin:4px 0px 0px; padding: 0px;" data-playvideoimage="playvideo-64-64-0.png" data-playvideoimagepos="center" data-imgtitle="title" data-circularlimit="3" data-deferloadingdelay="0" data-lightboxsocialposition="position:absolute;top:100%;right:0;" data-lightboxsocialpositionsmallscreen="position:absolute;top:100%;right:0;left:0;" data-lightboxsocialdirection="horizontal" data-lightboxsocialbuttonsize="32" data-lightboxsocialbuttonfontsize="18" data-sameheightmediumscreen="769" data-sameheightmediumheight="200" data-sameheightsmallscreen="415" data-sameheightsmallheight="150" data-triggerresizedelay="100" data-lightboxslideinterval="5000" data-lightboxtimerposition="bottom" data-lightboxtimercolor="#dc572e" data-lightboxtimeropacity="1" data-lightboxbordersize="8" data-lightboxborderradius="0" data-screenquery="{ &quot;tablet&quot;: { &quot;screenwidth&quot;: 800, &quot;visibleitems&quot;: 2 }, &quot;mobile&quot;: { &quot;screenwidth&quot;: 480, &quot;visibleitems&quot;: 1 } }" data-jsfolder="https://aissmsioit.org/wp-content/plugins/wonderplugin-carousel/engine/" style="display: block; position: relative; margin: 0px auto; width: 100%; max-width: 100%; direction: ltr;"><div class="amazingcarousel-list-container" style="overflow: visible; position: relative; margin: 0px auto; width: 100%; box-sizing: border-box;"><div class="amazingcarousel-list-wrapper" style="overflow: hidden; width: 100%;"><ul class="amazingcarousel-list" style="display: block; position: relative; list-style-type: none; list-style-image: none; background-image: none; background-color: transparent; padding: 0px; margin: 0px 0px 0px -1339px; width: 14000px;"><li class="amazingcarousel-item amazingcarousel-item-0" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/accenture-logo.jpg" title="acenture" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/accenture-logo.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/accenture-logo.jpg" alt="acenture" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-1" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/amdocs-logo.jpg" title="amdocs" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/amdocs-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/amdocs-logo.jpg" alt="amdocs" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-2" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/bajaj-logo.jpg" title="bajajallianz" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/bajaj-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/bajaj-logo.jpg" alt="bajajallianz" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-3" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/indian-sena-logo.jpg" title="bhartiyasena" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/indian-sena-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/indian-sena-logo.jpg" alt="bhartiyasena" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-4" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/burckhardt-logo.jpg" title="bueckhardt compression" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/burckhardt-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/burckhardt-logo.jpg" alt="bueckhardt compression" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-5" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/cognizent-logo.jpg" title="cognizant1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/cognizent-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/cognizent-logo.jpg" alt="cognizant1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-6" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/forbes-logo.jpg" title="forbesmarshal1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/forbes-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/forbes-logo.jpg" alt="forbesmarshal1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-7" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/godrej-logo.jpg" title="godrej" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/godrej-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/godrej-logo.jpg" alt="godrej" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-8" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/HCL-logo.jpg" title="hcl" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/HCL-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/HCL-logo.jpg" alt="hcl" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-9" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/Honeywell-logo.jpg" title="honeywell" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/Honeywell-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/Honeywell-logo.jpg" alt="honeywell" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-10" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/IBM-logo.jpg" title="ibm" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/IBM-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/IBM-logo.jpg" alt="ibm" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-11" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/Idea-logo.jpg" title="idea1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/Idea-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/Idea-logo.jpg" alt="idea1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-12" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/Infosys-logo.jpg" title="infosys" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/Infosys-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/Infosys-logo.jpg" alt="infosys" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-13" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/KEC-logo.jpg" title="kec1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/KEC-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/KEC-logo.jpg" alt="kec1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-14" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/LT-logo.jpg" title="larsen n turbo" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/LT-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/LT-logo.jpg" alt="larsen n turbo" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-15" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/microsoft-logo.jpg" title="microsoft" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/microsoft-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/microsoft-logo.jpg" alt="microsoft" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-16" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/indian-nevy-logo.jpg" title="navy" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/indian-nevy-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/indian-nevy-logo.jpg" alt="navy" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-17" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/oracle-logo.jpg" title="oracle" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/oracle-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/oracle-logo.jpg" alt="oracle" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-18" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/persistent-logo.jpg" title="persistent" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/persistent-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/persistent-logo.jpg" alt="persistent" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-19" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/SKF-logo.jpg" title="skf" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/SKF-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/SKF-logo.jpg" alt="skf" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-20" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/sungard-logo.jpg" title="sungard" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/sungard-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/sungard-logo.jpg" alt="sungard" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-21" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/symantec-logo.jpg" title="symantec" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/symantec-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/symantec-logo.jpg" alt="symantec" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-22" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/tata-logo.jpg" title="tata1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/tata-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/tata-logo.jpg" alt="tata1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-23" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/teach-mahindra-logo.jpg" title="techmahindra" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/teach-mahindra-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/teach-mahindra-logo.jpg" alt="techmahindra" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-24" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/indian-armry-logo.jpg" title="vayu sena" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/indian-armry-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/indian-armry-logo.jpg" alt="vayu sena" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-25" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/vodafone-logo.jpg" title="vodafone" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/vodafone-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/vodafone-logo.jpg" alt="vodafone" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-26" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/whirlpool-logo.jpg" title="whirlpool" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/whirlpool-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/whirlpool-logo.jpg" alt="whirlpool" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-27" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/zensar-logo.jpg" title="zensar" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/zensar-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/zensar-logo.jpg" alt="zensar" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-0" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/accenture-logo.jpg" title="acenture" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/accenture-logo.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/accenture-logo.jpg" alt="acenture" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-1" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/amdocs-logo.jpg" title="amdocs" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/amdocs-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/amdocs-logo.jpg" alt="amdocs" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-2" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/bajaj-logo.jpg" title="bajajallianz" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/bajaj-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/bajaj-logo.jpg" alt="bajajallianz" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-3" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/indian-sena-logo.jpg" title="bhartiyasena" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/indian-sena-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/indian-sena-logo.jpg" alt="bhartiyasena" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-4" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/burckhardt-logo.jpg" title="bueckhardt compression" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/burckhardt-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/burckhardt-logo.jpg" alt="bueckhardt compression" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-5" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/cognizent-logo.jpg" title="cognizant1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/cognizent-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/cognizent-logo.jpg" alt="cognizant1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-6" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/forbes-logo.jpg" title="forbesmarshal1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/forbes-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/forbes-logo.jpg" alt="forbesmarshal1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-7" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/godrej-logo.jpg" title="godrej" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/godrej-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/godrej-logo.jpg" alt="godrej" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-8" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/HCL-logo.jpg" title="hcl" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/HCL-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/HCL-logo.jpg" alt="hcl" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-9" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/Honeywell-logo.jpg" title="honeywell" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/Honeywell-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/Honeywell-logo.jpg" alt="honeywell" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-10" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/IBM-logo.jpg" title="ibm" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/IBM-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/IBM-logo.jpg" alt="ibm" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-11" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/Idea-logo.jpg" title="idea1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/Idea-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/Idea-logo.jpg" alt="idea1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-12" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/Infosys-logo.jpg" title="infosys" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/Infosys-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/Infosys-logo.jpg" alt="infosys" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-13" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/KEC-logo.jpg" title="kec1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/KEC-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/KEC-logo.jpg" alt="kec1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-14" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/LT-logo.jpg" title="larsen n turbo" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/LT-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/LT-logo.jpg" alt="larsen n turbo" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-15" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/microsoft-logo.jpg" title="microsoft" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/microsoft-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/microsoft-logo.jpg" alt="microsoft" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-16" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/indian-nevy-logo.jpg" title="navy" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/indian-nevy-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/indian-nevy-logo.jpg" alt="navy" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-17" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/oracle-logo.jpg" title="oracle" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/oracle-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/oracle-logo.jpg" alt="oracle" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-18" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/persistent-logo.jpg" title="persistent" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/persistent-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/persistent-logo.jpg" alt="persistent" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-19" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/SKF-logo.jpg" title="skf" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/SKF-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/SKF-logo.jpg" alt="skf" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-20" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/sungard-logo.jpg" title="sungard" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/sungard-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/sungard-logo.jpg" alt="sungard" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-21" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/symantec-logo.jpg" title="symantec" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/symantec-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/symantec-logo.jpg" alt="symantec" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-22" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/tata-logo.jpg" title="tata1" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/tata-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/tata-logo.jpg" alt="tata1" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-23" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/teach-mahindra-logo.jpg" title="techmahindra" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/teach-mahindra-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/teach-mahindra-logo.jpg" alt="techmahindra" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-24" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/indian-armry-logo.jpg" title="vayu sena" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/indian-armry-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/indian-armry-logo.jpg" alt="vayu sena" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-25" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/vodafone-logo.jpg" title="vodafone" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/vodafone-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/vodafone-logo.jpg" alt="vodafone" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><li class="amazingcarousel-item amazingcarousel-item-26" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/whirlpool-logo.jpg" title="whirlpool" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/whirlpool-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/whirlpool-logo.jpg" alt="whirlpool" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a><div style="display:none !important;visibility:none !important;opacity:0 !important;position:absolute;bottom:6px;right:6px;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#666;padding:2px 4px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#fff;opacity:0;filter:alpha(opacity=90);cursor:pointer;display:block !important;visibility:visible !important;font-size:12px!important;"><a href="https://www.wonderplugin.com/wordpress-carousel/" style="text-decoration:none;font:12px Arial,Tahoma,Helvetica,sans-serif;color:#333;display:block !important;visibility:visible !important;font-size:12px!important;" target="_blank">WordPress Carousel Free Version</a></div></div></div></li><li class="amazingcarousel-item amazingcarousel-item-27" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px; padding: 0px; float: left; width: 250px;"><div class="amazingcarousel-item-container" style="position: relative; margin: 0px 2px;"><div class="amazingcarousel-image" style="height: 114.24px; overflow: hidden;"><a href="https://aissmsioit.org/wp-content/uploads/2019/04/zensar-logo.jpg" title="zensar" data-thumbnail="https://aissmsioit.org/wp-content/uploads/2019/04/zensar-logo-150x120.jpg" class="wondercarousellightbox wondercarousellightbox-8" data-group="wondercarousellightbox-8" data-mediatype="0"><div class="amazingcarousel-image-fix-wrapper" style="width:100%;height:100%;overflow:hidden;"><img class="amazingcarousel-image-img" src="https://aissmsioit.org/wp-content/uploads/2019/04/zensar-logo.jpg" alt="zensar" data-description="" style="width: auto; height: 100%; max-width: none; max-height: 100%; margin-top: 0px; margin-left: 0px; visibility: visible;"></div></a></div></div></li><div style="clear:both;"></div></ul></div><div class="amazingcarousel-prev"></div><div class="amazingcarousel-next"></div></div><div class="amazingcarousel-nav"></div><div class="wonderplugin-engine" style="display: none;"><a href="http://www.wonderplugin.com/wordpress-carousel/" title="Responsive WordPress Carousel Slider Plugin">Responsive WordPress Carousel Slider Plugin</a></div></div></div></div></div></div></div></div>
